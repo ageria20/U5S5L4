@@ -9,6 +9,11 @@ import jakarta.persistence.Entity;
 public class Drink extends Product{
     private double lt;
 
+    public Drink(){
+        super();
+    }
+
+
     public Drink(String description, double price, int kcals, double lt) {
         super(price, description, kcals);
         this.lt = lt;

@@ -5,6 +5,7 @@ import ageria.U5S5L4.ProductConfig;
 import ageria.U5S5L4.entities.Drink;
 import ageria.U5S5L4.entities.Pizza;
 import ageria.U5S5L4.entities.Topping;
+import ageria.U5S5L4.entities.exceptions.ValidationException;
 import ageria.U5S5L4.entities.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -40,16 +41,21 @@ public class ProductRunner implements CommandLineRunner {
         Drink coke = pc.getCoke();
         Drink fanta = pc.getFanta();
 
-        ps.saveProduct(pinkPizza);
-        ps.saveProduct(wrustelPizza);
-        ps.saveProduct(pizzaTonnoCipolla);
-        ps.saveProduct(margherita);
-        ps.saveProduct(prosciutto);
-        ps.saveProduct(wrustel);
-        ps.saveProduct(tonnoCipolla);
-        ps.saveProduct(beer);
-        ps.saveProduct(coke);
-        ps.saveProduct(fanta);
+//        ps.saveProduct(pinkPizza);
+//        ps.saveProduct(wrustelPizza);
+//        ps.saveProduct(pizzaTonnoCipolla);
+//        ps.saveProduct(margherita);
+//        ps.saveProduct(prosciutto);
+//        ps.saveProduct(wrustel);
+//        ps.saveProduct(tonnoCipolla);
+//        ps.saveProduct(beer);
+//        ps.saveProduct(coke);
+//        ps.saveProduct(fanta);
+
+        // Trova tutti i prodotti che corrispondono alla descrizione data
+        System.out.println(ps.findyProductByName("margherita"));
+
+
 
     }
 }

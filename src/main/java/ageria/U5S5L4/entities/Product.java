@@ -30,6 +30,10 @@ public abstract class Product {
         this.kcals = kcals;
     }
 
+    public Product() {
+
+    }
+
 
     public double getPrice() {
         return price;

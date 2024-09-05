@@ -15,6 +15,10 @@ public class Topping extends Product{
     @JoinColumn(name = "pizzaId")
     private Pizza pizzaId;
 
+    public Topping(){
+        super();
+    }
+
     public Topping(String description, int kcals, double price) {
         super(price, description, kcals);
 
@@ -25,8 +29,7 @@ public class Topping extends Product{
 
     @Override
     public String toString() {
-        return "Topping{" +
-
-                '}';
+        return "Topping: " +
+                this.getDescription() + " kcals: "+ this.getKcals() + " price: "+ this.getPrice();
     }
 }
