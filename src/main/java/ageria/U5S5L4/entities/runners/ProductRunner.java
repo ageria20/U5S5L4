@@ -56,6 +56,11 @@ public class ProductRunner implements CommandLineRunner {
         System.out.println(ps.findyProductByName("margherita"));
 
 
+        ps.getDrinkByLt(0.33).forEach(System.out::println);
+
+        ps.findByIdAndUpdate(3, "CipoTonno");
+
+
 
     }
 }

@@ -20,4 +20,8 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
 
     @Query("SELECT d FROM Drink d WHERE d.lt = :lt")
     List<Drink> findDrinkByLt(double lt);
+
+    boolean existsByDescription(String description);
+
+
 }
