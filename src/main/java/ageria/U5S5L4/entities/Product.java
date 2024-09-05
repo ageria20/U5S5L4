@@ -1,14 +1,27 @@
 package ageria.U5S5L4.entities;
 
+import jakarta.persistence.*;
 import lombok.*;
 
 @Getter
 @Setter
-
 @ToString
+@Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "products")
 public abstract class Product {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long productId;
+
+    @Column
     private double price;
+
+    @Column
     private String description;
+
+    @Column
     private int kcals;
 
     public Product(double price, String description, int kcals) {
