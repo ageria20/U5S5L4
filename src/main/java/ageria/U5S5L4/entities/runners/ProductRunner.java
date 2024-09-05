@@ -22,32 +22,47 @@ public class ProductRunner implements CommandLineRunner {
     private ProductService ps;
 
     @Autowired
-    private ProductConfig pc;
+    private Topping prosciutto;
 
+    @Autowired
+    private Topping margherita;
+    @Autowired
+    private Topping wrustel;
+
+    @Autowired
+    private Topping tonnoCipolla;
+
+    @Autowired
+    private Pizza pinkPizza;
+
+    @Autowired
+    private Pizza pizzaTonnoCipolla;
+
+    @Autowired
+    private Pizza pizzaWrustel;
+
+    @Autowired
+    private Drink beer;
+
+    @Autowired
+    private Drink coke;
+
+    @Autowired
+    private Drink fanta;
 
     @Override
     public void run(String... args) throws Exception {
 
-        Pizza pinkPizza = pc.getPinkPizza();
-        Pizza wrustelPizza = pc.getPizzaWrustel();
-        Pizza pizzaTonnoCipolla = pc.getPizzaTonnoCipolla();
-
-        Topping margherita = pc.margherita();
-        Topping prosciutto = pc.getProsciutto();
-        Topping wrustel = pc.getWrustel();
-        Topping tonnoCipolla = pc.getTonnoCipolla();
-
-        Drink beer = pc.getBeer();
-        Drink coke = pc.getCoke();
-        Drink fanta = pc.getFanta();
-
-//        ps.saveProduct(pinkPizza);
-//        ps.saveProduct(wrustelPizza);
-//        ps.saveProduct(pizzaTonnoCipolla);
 //        ps.saveProduct(margherita);
 //        ps.saveProduct(prosciutto);
 //        ps.saveProduct(wrustel);
 //        ps.saveProduct(tonnoCipolla);
+//
+//        ps.saveProduct(pinkPizza);
+//        ps.saveProduct(pizzaWrustel);
+//        ps.saveProduct(pizzaTonnoCipolla);
+//
+//
 //        ps.saveProduct(beer);
 //        ps.saveProduct(coke);
 //        ps.saveProduct(fanta);
