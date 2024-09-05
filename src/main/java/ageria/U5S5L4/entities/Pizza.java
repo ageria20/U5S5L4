@@ -1,9 +1,6 @@
 package ageria.U5S5L4.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.List;
@@ -12,8 +9,10 @@ import java.util.List;
 @Setter
 @ToString
 @Entity
-@Table(name = "pizza")
+@DiscriminatorValue("pizza")
 public class Pizza extends Product{
+
+
 
     @OneToMany(mappedBy = "pizzaId")
     private List<Topping> topping;

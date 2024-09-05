@@ -1,6 +1,11 @@
 package ageria.U5S5L4.entities;
 
 
+import jakarta.persistence.DiscriminatorValue;
+import jakarta.persistence.Entity;
+
+@Entity
+@DiscriminatorValue("drink")
 public class Drink extends Product{
     private double lt;
 

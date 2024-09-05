@@ -1,10 +1,14 @@
 package ageria.U5S5L4.entities;
 
 
+import jakarta.persistence.DiscriminatorValue;
+import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import org.hibernate.annotations.ManyToAny;
 
+@Entity
+@DiscriminatorValue("topping")
 public class Topping extends Product{
 
     @ManyToOne

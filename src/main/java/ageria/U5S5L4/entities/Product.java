@@ -8,7 +8,7 @@ import lombok.*;
 @ToString
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "products")
+@DiscriminatorColumn(name = "product_type")
 public abstract class Product {
 
     @Id
