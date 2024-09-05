@@ -40,7 +40,16 @@ public class ProductRunner implements CommandLineRunner {
         Drink coke = pc.getCoke();
         Drink fanta = pc.getFanta();
 
-        
+        ps.saveProduct(pinkPizza);
+        ps.saveProduct(wrustelPizza);
+        ps.saveProduct(pizzaTonnoCipolla);
+        ps.saveProduct(margherita);
+        ps.saveProduct(prosciutto);
+        ps.saveProduct(wrustel);
+        ps.saveProduct(tonnoCipolla);
+        ps.saveProduct(beer);
+        ps.saveProduct(coke);
+        ps.saveProduct(fanta);
 
     }
 }
